@@ -1,0 +1,273 @@
+\chapter*{Appendix: Methodology and the Companion Repository}
+\addcontentsline{toc}{chapter}{Appendix: Methodology and the Companion Repository}
+\markboth{Appendix: Methodology}{}
+
+% Long monospace file names cannot hyphenate on an A5 measure. Give TeX room
+% to stretch rather than overrun, as the glossary does for its compounds.
+\begingroup
+\emergencystretch=3em
+\hbadness=6000
+\sloppy
+
+The preface promised that where a number in these pages is mine, the
+script that produced it ships with the book, and that where it belongs to
+somebody else, the citation says whose. This appendix is what makes that
+promise checkable. It describes what the companion repository holds and which
+part of it produces which chapter's numbers. The repository is at \repourl.
+
+\section*{How the Numbers Were Made}
+
+The companion repository is a working file cabinet, not a software product. It
+holds the data the book runs on, the scripts that turn that data into the
+numbers printed in the chapters, the scripts that draw the figures, and three
+checkers that police the manuscript itself. Those live under \texttt{analysis/data},
+\texttt{analysis/checks} and \texttt{analysis/figures}, with two larger pieces
+beside them: the Chapter~5 backtest kit, and the historical calculator that
+Chapter~9 asks you to run on your own mix of its two machines. The repository outlives this
+printing, so every edition of the book is published alongside a matching tag.
+The edition's tag is listed on the copyright page. Check out that tag to reproduce the version used for this edition. % src: the printed edition and its tag are cut together; the tag name is set at press and printed in the front matter
+
+The division of labor is deliberate. A fetcher goes out to a public source and
+writes its result into \texttt{analysis/data}; there are ten. An analysis
+script reads those files and prints to the console every number that a source comment in its chapter attributes to it, and draws nothing. These are the twenty-seven R
+scripts and seven Python scripts in \texttt{analysis/checks}, which is a directory named for its purpose rather than for most of its contents. A figure script reads the same
+files, or a small summary table an analysis script wrote, and draws exactly one
+figure. Several figure scripts also print the values their caption quotes,
+which is why none of Chapters~1 to 4 needs more than three analysis scripts of its own.
+Chapter~2 never touches \texttt{analysis/checks}, Chapter~3 has one of its
+own, and Chapter~1 has three: for the network's power, for the listed fleets
+and the other checks on its efficiency range, and for when its hashrate peaked. Chapter~4
+borrows two of them. Chapter~1 also borrows Chapter~6's ledger for the
+delivered price, and Chapter~7 reaches into the directory only for the one
+number it borrows from Chapter~6. % src: analysis/data/fetch_*.py and fetch_*.R (9) and the readability poller analysis/data/ercot_api_readability/poll.py (10); python3 analysis/checks/check_src_comments.py --count, analysis/checks inventory: 27 .R analysis scripts (ch9_tuning.R and ch9_hashprice.R among them, libraries the ledger scripts load, ch8_demand.R, which every chapter 8 demand script sources, official_4cp.R, the library every reader of the official 4CP intervals loads, and oncor_distribution.R, the distribution tariff that ch6_btm_ledger.R, ch9_optimal_stack.R, ch10_hashprice_sensitivity.R and ch9_calculator_export.R bill from; 26 until 2026-10-03), 7 .py analysis scripts (ch5_price_autocorrelation.py, ch5_adder_example.py, ch5_stakes.py, ch5_posting_latency.py, ch5_api_readability.py, ch5_vfloor.py, ch8_postage_stamp.py) and 3 .py checkers (check_citations.py, check_glossary_trace.py, check_src_comments.py); no script in analysis/checks calls ggsave, png() or pdf(); every analysis/figures/*.R writes one figure as .png and .pdf; same run, analysis/checks scripts the source notes name: chapter 1 ch1_network_energy.R, ch1_fleet_efficiency.R and ch1_hashrate_peak.R, and chapter 6's ch6_btm_ledger.R (chapter-1.tex:55, the delivered price), chapter 3 ch3_typical_hour.R, chapter 4 two of chapter 1's, ch1_network_energy.R and ch1_hashrate_peak.R (chapter-4.tex:24 and :42-43), chapter 7 ch6_contract_pnl.R (chapter-7.tex:91), chapter 2 none
+
+Every quantitative
+claim in the chapters carries a comment in the \LaTeX{} source, written
+\texttt{\% src:}, sitting immediately after the sentence it belongs to. There
+are 592 of them across the chapters and the preface, and 17 more in this
+appendix. % src: python3 analysis/checks/check_src_comments.py --count: 609 src comments across book/chapters/*.tex: 591 in chapters 1-10 + one in the preface = 592, the figure printed here, and 17 in this appendix; glossary.tex and the roadmap carry none; counted as comments, not string matches (a comment whose text, after the first unescaped percent sign on its line, starts with src:): a string match also finds the marker this appendix prints and a second marker inside one chapter 5 comment (chapter-5.tex:127), 611 in all, and the run lists both by line; fig-src and tab-src notes (26 and 7) are not in these totals
+Most name a bibliography key, usually with a section or page
+number, or the path of the script that computed the number; a few name the
+committed data file directly, and a few show the arithmetic inline where the
+step is one line long and a script would be theater. They live in the source
+and never appear on the printed page, so tracing a number means opening the
+chapter's \texttt{.tex} file rather than hunting through these pages. The
+glossary is the exception: its entries restate numbers the chapters already
+source, and carry no comments of their own. One of the three checkers,
+\texttt{check\_glossary\_trace.py}, finds the numbers the glossary prints and
+the chapter line each restates, and fails on any it cannot place or whose
+chapter line has changed since it was last checked by hand. % src: python3 analysis/checks/check_glossary_trace.py: 635 quantitative tokens in 184 glossary entries, 608 traced in context to a chapter line, 27 pinned by the 27 rows of analysis/checks/glossary_trace_exceptions.csv (roundings, counts and positions the chapter gives by naming things in order, complements, and real homes the matcher passes over for a coincidence, each row checked against verbatim text of its chapter line), 0 value-only, 0 untraced; every row is held against the reviewed trace map analysis/data/glossary_trace.csv, whose best hits were read by hand
+
+The mix of source types differs from chapter to chapter. Chapters~1 through
+3 carry 107 source comments between them, and only 18 name a script or
+a committed data file, because most of their numbers belong to other people.
+Chapter~9 names a script in 57 of its 69, and a script or a committed data file
+in 60. % src: python3 analysis/checks/check_src_comments.py --count: chapter-1/2/3 27 + 40 + 40 = 107 src comments, eighteen naming a script or an analysis/data file (chapter 1 seventeen, chapter 3 one, chapter 2 none); chapter-9.tex 69 src comments, 57 naming a .R or .py script, 60 naming a script or an analysis/data file
+
+% The appendix is unnumbered, so its table would continue chapter 10's count.
+\renewcommand{\thetable}{A.\arabic{table}}\setcounter{table}{0}
+\begin{table}[htbp]
+  \centering
+  \scriptsize
+  \setlength{\tabcolsep}{3.5pt}
+  \begin{tabular}{@{}p{11mm}p{88mm}@{}}
+    \hline
+    \textbf{Ch.} & \textbf{What produces its numbers and figures} \\
+    \hline
+    1 & \texttt{ch1\_network\_energy.R} (the network's power and energy across
+        the range of its fleet efficiency), \texttt{ch1\_fleet\_efficiency.R}
+        (the checks on that range: the efficiency the listed fleets
+        publish, the share of revenue each end of it would spend on power, and
+        Cambridge's figures, quoted) and
+        \texttt{ch1\_hashrate\_peak.R} (when its hashrate peaked); figures from
+        \texttt{fig\_ch1\_network\_hr\_diff.R},
+        \texttt{fig\_ch1\_asic\_efficiency.R} (on a hand transcription of
+        Bitmain's own documents), \texttt{fig\_ch1\_global\_generation.R}. The
+        listed fleets are hand transcribed from the companies' filings and
+        releases, their power bills from a fund manager's compilation of
+        those filings. The other numbers are citations, and
+        the machine specifications are the manufacturers' own. \\
+    2 & \texttt{fig\_ch2\_uri\_frequency.R}, a schematic reconstruction from the
+        FERC/NERC staff report's anchor values. The numbers are citations. \\
+    3 & \texttt{fig\_ch3\_lz\_map.R}, and \texttt{ch3\_typical\_hour.R} for
+        what a typical hour clears at. The other numbers are protocol, tariff
+        and regulatory citations. \\
+    4 & \texttt{fig\_ch4\_hashprice\_cycle.R} (bitcoin price, network hashrate,
+        hashprice) and \texttt{fig\_ch4\_sensitivity.R} (margin against
+        hashprice for the two standing machines). \\
+    5 & \texttt{ch5\_oracle\_check.R}, a simulator-free check on how often
+        the run-or-pause call is in doubt; \texttt{ch5\_price\_autocorrelation.py},
+        \texttt{ch5\_adder\_example.py} and \texttt{ch5\_stakes.py} for the
+        price statistics, and \texttt{ch5\_posting\_latency.py} for when ERCOT
+        posts each print and \texttt{ch5\_api\_readability.py} for when it can be read; \texttt{ch5\_vfloor.py} for the fleet data below each
+        machine's best-efficiency point; \texttt{ch5-backtest/} for the control-loop study itself
+        (\texttt{papo\_sim.py}, eight study drivers, an optimizer check and a
+        database builder); five
+        \texttt{fig\_ch5\_*.R} scripts for the efficiency curves, the optimal
+        power target, the hold and price deadband, the backstop, and the oracle
+        benchmark. \\
+    6 & \texttt{ch6\_btm\_ledger.R} (what a 100 MW mine pays on top of
+        energy), \texttt{ch6\_contract\_pnl.R} (cost by contract shape),
+        \texttt{ch6\_basis.R} (basis), \texttt{ch6\_strike\_events.R} (the
+        strike's pauses), \texttt{sell\_vs\_mine.R} (the owner-generator's
+        choice), \texttt{oncor\_distribution.R} (the distribution bill, shared with Chapters~9 and~10); four \texttt{fig\_ch6\_*.R} scripts. \\
+    7 & \texttt{fig\_ch7\_as\_history.R} and
+        \texttt{fig\_ch7\_standing\_revenue.R}. Both print the clearing prices
+        and annual standing revenues the text quotes. \\
+    8 & \texttt{ch8\_postage\_stamp.py} sets the postage stamp rate against
+        the cost of service it recovers; \texttt{ch8\_demand.R} assembles the
+        complete demand proxy from ERCOT fuel generation, without gap-fill; \texttt{official\_4cp.R} reads ERCOT's official
+        intervals and derives each one's start from its label, for this
+        chapter, Chapters~9 and 10; \texttt{ch8\_4cp\_peaks.R} reconstructs the monthly peak intervals;
+        \texttt{ch8\_4cp\_prices.R}, \texttt{ch8\_4cp\_rules.R} and
+        \texttt{ch8\_12cp\_haystack.R} price them, test forecast-free dodging
+        rules, and count how thick the near-peak haystack gets under twelve
+        peaks; \texttt{ch8\_ers\_blocks.R} prices ERS. Figures from \texttt{fig\_ch8\_4cp\_calendar.R} and
+        \texttt{fig\_ch8\_4cp\_window.R}. \\
+    9 & \texttt{ch9\_flexibility\_stack.R} and \texttt{ch9\_optimal\_stack.R}
+        carry the ledger; \texttt{ch9\_tuning.R} is the power-target layer that they,
+        the cross-checks, the calculator export and Chapter~10 all load, and
+        \texttt{ch9\_hashprice.R} is the daily hashprice every ledger
+        script reads, with the calendar checked so that no day is dropped
+        unseen (\texttt{ch9\_vs\_papo.R} excepted: it reproduces an
+        external run on that run's own 362 days);
+        \texttt{ch9\_control\_friction.R} and \texttt{ch9\_vs\_papo.R} are the
+        cross-checks; \texttt{ch9\_calculator\_export.R} builds the
+        calculator's payload. Four \texttt{fig\_ch9\_*.R} scripts. \\
+    10 & \texttt{ch10\_subsidy\_arithmetic.R} (the halving schedule and the fee
+        share of the security budget) and \texttt{ch10\_hashprice\_sensitivity.R}
+        (Chapter~9's reference site rerun at lower hashprice), with
+        \texttt{fig\_ch10\_security\_budget.R} and
+        \texttt{fig\_ch10\_hashprice\_sensitivity.R}. \\
+    \hline
+  \end{tabular}
+  \caption{What produces each chapter's numbers and figures. Scripts live under
+  \texttt{analysis/checks} and \texttt{analysis/figures} in the companion
+  repository, and Chapter~5's study under \texttt{analysis/ch5-backtest}.} % src: file listing of analysis/checks, analysis/figures and analysis/ch5-backtest (papo_sim.py; drivers mixed_basis_study.py, naive_gap.py, baselines_study.py, capture_anatomy.py, trend_followup.py, fade_study.py, multizone_study.py, reactive_papo_trend.py; optimizer_bruteforce_check.py; build_prices_db.py); header comment of each script names its chapter and its output
+  \label{tab:appendix-scripts}
+\end{table}
+
+ERCOT settlement point prices for all
+eight load zones, day-ahead and real-time back to 2021, and for two hubs in real time, come from ERCOT's own
+public archive through \texttt{fetch\_ercot\_rtm15\_spp\_history.py}, which
+requires no login credentials or API key: these are files ERCOT posts on the
+open web, and that one script writes all of these price files. Ancillary-service clearing
+prices come from the same archive through
+\texttt{fetch\_ercot\_as\_mcpc\_history.py}. Fifteen-minute generation by fuel comes from
+ERCOT's Fuel Mix Report through \texttt{fetch\_ercot\_fuel\_mix.py}.
+Chapter~8 uses the sum, including negative battery charging, as a demand proxy:
+net DC-tie imports and explicit Block Load Transfer adjustments are omitted.
+The early workbooks include storage-load adjustments inside ``Other''; later
+workbooks report them separately. The sum includes them in either case.
+Every operating day is complete, with no gap-fill.
+The latest months are still ERCOT's initial settlement and are not presented as final. The repository also keeps an hourly Native Load snapshot, which no printed number uses.
+The moment ERCOT posts each five-minute price comes from its public report
+listing through \texttt{fetch\_ercot\_np6788\_posting.py}. None of these
+needs an account or key. Three scripts do need a free ERCOT API
+Explorer account and a connection from inside the United States. The poller in
+\texttt{analysis/data/ercot\_api\_readability} timed when each price became
+readable; its ten days of polls ship, so checking those numbers needs no
+account. \texttt{fetch\_lz\_west\_ercot.py} and the backtest kit's own ingester
+are on the path to no printed number; they are there to extend the series past
+what ships. % src: analysis/data/fetch_ercot_rtm15_spp_history.py docstring ("No account, no API key, no credentials: these are public files"; MIS reportTypeId 13061 and 13060, two outputs; with --hubs, only the third, ercot_rtm15_spp_hubs_2021on.csv.gz, HB_NORTH and HB_WEST from 13061, read by analysis/checks/ch6_basis.R); fetch_ercot_as_mcpc_history.py docstring (MIS reportTypeId 13091, NP4-181-ER Historical DAM Clearing Prices for Capacity, one DAMASMCPC_YYYY.zip a year; no account, no key); fetch_ercot_native_load.R header ("Credential-free"), fetch_ercot_fuel_mix.py docstring ("No account, no key, no credentials") and fetch_ercot_np6788_posting.py docstring ("Credential-free", MIS reportTypeId 12300 listing); fetch_lz_west_ercot.py and analysis/ch5-backtest/ingest/ercot_ingest.py read ERCOT_USERNAME / ERCOT_PASSWORD / ERCOT_SUBSCRIPTION_KEY
+
+Every ERCOT series in the repository comes from ERCOT itself. The
+five-minute prints, the 15-minute settlement point prices and the
+ancillary-service and ERS clearing prices are pulled from its Market Information
+System, and the annual aggregates that Chapters~4 and 6 use as cross-checks are
+rebuilt from those files by a script rather than carried as
+opaque tables. Hashprice,
+network hashrate and difficulty come from the Braiins Insights public API and
+from blockchain.info's public charts. Plant locations are EIA-860M and the Texas
+outline is a Census boundary file, both public domain. The efficiency curves come
+from the fleet dataset, aggregated operating data from real machines running
+Braiins~OS rather than measurements in a laboratory, and the chapters say so every time they use them. % src: analysis/data/README.md provenance table; analysis/data/build_lz_west_annual_means.R rebuilds both annual-means tables from ercot_spp_rtm5_lzwest.csv.gz and ercot_dam_spp_loadzones_2021on.csv.gz, reproducing the 2025 real-time figures exactly; Braiins Insights; EIA-860M June 2026; Census cb\_2023\_us\_state\_20m; ercot_dam_as_mcpc.csv.gz from MIS 13091 (fetch_ercot_as_mcpc_history.py), ercot_ers_procurement.csv from MIS 11465, NP3-144-M (fetch_ercot_ers_procurement.py, credential-free), analysis/data/README.md fetchers table; ercot_fuel_mix_15min_2019on.csv.gz from the Fuel Mix Report, 2019-2021 WSL adjustments included in Other according to each workbook Summary note, FINAL through July 2026 and INITIAL August-September 2026
+
+Braiins~OS sends operating data about the machines it runs to Braiins, which uses
+it to develop the firmware, as its privacy policy discloses \autocite{braiins2020osprivacy}.
+This book uses only the fleet dataset: one average per machine model and power
+target for the second quarter of 2026, committed to the companion repository,
+with no single customer's or machine's figures in it. % src: braiins2020osprivacy ("When you use your virtual currency mining device with Braiins OS operating system to mine virtual currencies, we may collect and process telemetric data related to your mining activities"; "We collect, store and process the above-mentioned analytical data to develop and test our Braiins OS products"); analysis/data/miner_efficiency_telemetry_2026q2.csv, columns model, power_w, avg_jth and hashrate_ths, 35 rows over two models (S19j Pro, S21 XP), no customer or machine identifier; wording proposed by Kristian Csepcsar (Zulip, Vit's Publications > Book, 2026-10-13) after a review comment that "telemetry" had drawn community criticism
+
+Some inputs are committed snapshots rather than live calls so the results can be reproduced. \texttt{fig\_ch1\_network\_hr\_diff.R} is the
+worked example. Its endpoint returns a rolling window that always ends at the
+moment of the request, so a script that fetched at build time would draw a
+different chart every run and the printed figure could never be checked against
+anything. It therefore reads a committed file, retrieved on September 14, 2026,
+and refreshes it only when you ask for that explicitly, which leaves the change
+visible in the repository's history. % src: analysis/figures/fig_ch1_network_hr_diff.R header and the REFRESH=1 branch; snapshot analysis/data/braiins_hashrate_difficulty_all.json, 104 points to 2026-09-14
+
+Before the Chapter~5 studies will run, one file has to be built. The price
+database they read is about 230 megabytes, too large to ship, so
+\texttt{build\_prices\_db.py} reconstitutes it in well under a minute from
+files that are committed: ERCOT's own settlement archive for the 15-minute
+and day-ahead prices, and the five-minute prints. It is the first command in
+the kit's instructions and the only setup step in the repository. % src: analysis/ch5-backtest/build_prices_db.py console (2,250,452 rows from ercot_rtm15_spp_loadzones_2021on.csv.gz, ercot_dam_spp_loadzones_2021on.csv.gz and ercot_spp_rtm5_lzwest.csv.gz; 227 MB; about 20 s, 20.3 s in a rebuild on 2026-09-25); analysis/ch5-backtest/README.md "Run it" section; analysis/data/prices.db is listed in .gitignore
+
+The analysis has several limitations.
+
+The two backtests are simulations, not accounts: Chapter~5's study and
+Chapter~9's ledger run today's two machines through past ERCOT prices, and no
+real site reported any of their figures. The oracle, the perfect-foresight twin
+and the hindsight ceiling see the outcome first, so each is
+printed as a ceiling, never as a strategy. Chapter~5's rules would have cost
+Chapter~9's two fleets 0.15~percent of their frictionless mining margin before grid charges in
+2025, with no charge for moving a target. Chapter~9's ledger covers 2021 to
+2025, Chapter~5's study runs to June 2026, and 2026 elsewhere is its first
+eight months, printed as such. % src: chapter-9.tex:11 (the fleet a control held fixed across the five years; what today's fleet would have earned, not what a site of the time did); chapter-5.tex:133-134 (the oracle: perfect foresight, a ceiling, not a strategy); chapter-9.tex:40 and :140 (the perfect-foresight twin; the best annual choice in hindsight printed as a ceiling, never as a plan, and never called a strategy); analysis/checks/ch9_control_friction.R console, rerun 2026-09-27 (2025 only, each fleet run alone at 74.10 MW: frictionless $53,741,258, chapter 5 rules $53,660,694, -$80,564 = 0.15%; moves counted, never charged), as chapter-9.tex:79-80; analysis/checks/ch9_optimal_stack.R console header (ledger years 2021-2025, 2021 from 2021-01-02), chapter-9.tex:41; analysis/ch5-backtest/README.md (TEST-2025-26 ends 2026-06-22 Central), chapter-5.tex:167; 2026 elsewhere: chapter-5.tex:61 src (2026-01-01 to 08-29), chapter-9.tex:70 and :75 (the eight months of 2026), chapter-10.tex:43, :49, :74 and :96 (the first eight months, 2026 to date)
+
+The Chapter~3 map is the weakest artifact in the book and should be read as an
+orientation sketch. Load zones are electrical constructs, sets of buses, and
+ERCOT publishes no official geographic data for them; the polygons drawn here
+come from the only public vector source, a third-party re-host of a tracing of
+ERCOT's published map, with no license attached to it. The four
+non-opt-in zones have no public polygons at all and appear only in the caption.
+The dots are not nodes either: ERCOT withholds true bus coordinates as secured
+infrastructure information, so the map shows power plants from EIA-860M
+standing in for the generation side. % src: analysis/figures/fig_ch3_lz_map.R provenance header, layers 2 and 3 (ICF ArcGIS layer, unlicensed re-host, geometry traced from ERCOT's published map; NP4-160-SG; LZ_AEN, LZ_CPS, LZ_LCRA and LZ_RAYBN have no public polygons; node dots approximated by 988 EIA-860M plants)
+
+ERCOT's 4CP workbooks since 2008, the NP9-83-M files among them, leave one
+convention unstated, and every price and rule window that Chapters~8 and 9
+pair with a peak depends on it. A time such as 17:00 names the end of the
+15-minute settlement interval, so the official interval labeled 17:00 ran
+from 4:45 to 5~p.m. ERCOT's archived workbooks for 2003 to 2006, and its
+preliminary ones for 2007, say so in words, ``at interval ending'' beside the
+same bare time; its 2016 report to the commission does too; the protocols define
+every settlement interval by the time it ends; and a wires utility read
+ERCOT's 2024 times the same way in a 2025 rate filing
+\autocite{ercot4cphistzip,ercot4cp2016puct,ercot2026protocols,aeptexas58315}.
+The committed demand series agrees. On 23 of the 28 official days of 2019 to
+2025, the quarter-hour ending at the label carried more demand than the one
+starting at it. The repository keeps ERCOT's labels verbatim and derives each
+interval's start in one place, \texttt{official\_4cp.R}, which every script
+that pairs a peak with a price or a rule window reads. % src: ercot4cphistzip (2003-2006 workbooks and the June-August 2007 preliminary workbooks: at interval ending; 2006/FILING_20064CP.xls JUNE sheet, Peak Demand on 06/13/2006 at interval ending 16:15, beside the summary header 6/13/2006 16:15; the 2008-2020 workbooks and ercotnp983m 2022-2025 print bare labels only); ercot4cp2016puct p. 2 (Interval Ending (IE) 16:00; its workbook labels it 7/14/2016 16:00); ercot2026protocols sec. 10.9.1(2)(h) and 10.9.2(1)(h); aeptexas58315 p. 2 (2024 matrix peaks at the 15-minute interval ending times); analysis/checks/ch8_4cp_peaks.R console, label convention check (ending beats starting on 27 of 28; the day's peak ends at the label on 24 and starts at it on 1); analysis/checks/official_4cp.R
+
+Neither backtest engine charges anything for moving a power target. Chapter~5's
+and Chapter~9's both apply a new target within the interval, at the full
+efficiency of the curve. A machine that has no saved profile for a target
+spends a settling period tuning to it, so a real fleet can earn less than the
+engines show, by an amount that depends on the firmware and on how often the
+loop lands on a target it has not held before. In Chapter~5's kit that is once
+per corner point of the curve, four targets on the S21~XP and eight on the
+S19j~Pro; Chapter~9's engine chooses from a 100~W grid and is not bound to
+those points. Nothing in the repository measures the settling cost
+itself. % src: analysis/ch5-backtest/papo_sim.py simulate() (applied = ideal, no per-move charge); analysis/ch5-backtest/optimizer_bruteforce_check.py console, "targets the loop applies" block (4 of 4 and 8 of 8 hull points, no other target after each run's first move), as chapter-5.tex, Three Facts, prints them; analysis/checks/ch9_control_friction.R (moves counted, never charged); analysis/checks/ch9_tuning.R ch9_curve (J/TH interpolated on a 100 W grid, any grid point selectable) takes the best operating point in every interval, with no charge for changing it; the settling period as chapter-5.tex, Three Facts (braiinsacademyautotuning)
+Nor does either engine charge a paused machine for what it still draws. In
+Chapter~5's kit, each percent of stock power drawn through every pause, billed
+at the settlement point price, would take about 1.1 percent off the full loop's gain
+over stock power on the S19j~Pro and 0.4 percent on the S21~XP, out of sample;
+the repository holds no measurement of that draw. % src: analysis/ch5-backtest/baselines_study.py residual block (papo_sim.py simulate(paused_draw=0.01), TEST-2025-26 LZ_WEST: -1.10% (S19j Pro) and -0.43% (S21 XP) of the full loop's gain over S0 per 1% of stock draw, billed at the settlement price; 2%: -2.21% and -0.87%; TUNE-2024: -0.81% and -0.29% per 1%); papo_sim.py simulate() books a paused interval at 0 by default; analysis/checks/ch9_tuning.R prof_tuned and prof_stock are 0 when a fleet is off
+
+Two bodies of material in the repository are Braiins' own: the fleet
+dataset behind the efficiency curves, and the Chapter~5 backtest kit. Both are
+published here for the first time. Where a chapter rests on either, it says so
+in the text and not only in a source comment. % src: analysis/data/README.md provenance table (fleet telemetry row) and analysis/ch5-backtest/README.md; chapter-5.tex provenance paragraph
+
+\section*{On the Use of AI}
+
+I used Claude Code, an AI coding agent, throughout this project: to find
+candidate sources, to assemble the bibliography, to write the analysis and
+figure scripts, to audit that bibliography afterwards, and as a drafting
+assistant on the prose.
+
+\endgroup

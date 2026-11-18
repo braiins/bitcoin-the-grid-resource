@@ -1,0 +1,33 @@
+year,month,date,interval_ending_cpt,weekday,cp_load_mw,source
+2018,6,2018-06-27,17:00,Wednesday,69254.62,ERCOT 1996-2020 Four Coincident Peak Calculations archive (2018 workbook)
+2018,7,2018-07-19,17:00,Thursday,73538.70,ERCOT 1996-2020 Four Coincident Peak Calculations archive (2018 workbook)
+2018,8,2018-08-23,16:45,Thursday,69990.01,ERCOT 1996-2020 Four Coincident Peak Calculations archive (2018 workbook)
+2018,9,2018-09-19,16:30,Wednesday,64692.52,ERCOT 1996-2020 Four Coincident Peak Calculations archive (2018 workbook)
+2019,6,2019-06-19,17:00,Wednesday,68369.77,ERCOT revised 2019 4CP report (PUCT Docket 50333 Item 43); same values in the 1996-2020 archive
+2019,7,2019-07-30,16:30,Tuesday,71254.45,ERCOT revised 2019 4CP report (PUCT Docket 50333 Item 43); same values in the 1996-2020 archive
+2019,8,2019-08-12,17:00,Monday,75006.08,ERCOT revised 2019 4CP report (PUCT Docket 50333 Item 43); same values in the 1996-2020 archive
+2019,9,2019-09-06,16:45,Friday,69293.19,ERCOT revised 2019 4CP report (PUCT Docket 50333 Item 43); same values in the 1996-2020 archive
+2020,6,2020-06-08,17:45,Monday,68195.62,ERCOT 2020 4CP report (PUCT Project 27706 Item 470); same values in the 1996-2020 archive
+2020,7,2020-07-13,16:45,Monday,74392.19,ERCOT 2020 4CP report (PUCT Project 27706 Item 470); same values in the 1996-2020 archive
+2020,8,2020-08-13,16:45,Thursday,74420.39,ERCOT 2020 4CP report (PUCT Project 27706 Item 470); same values in the 1996-2020 archive
+2020,9,2020-09-01,14:30,Tuesday,64945.11,ERCOT 2020 4CP report (PUCT Project 27706 Item 470); same values in the 1996-2020 archive
+2021,6,2021-06-23,17:00,Wednesday,70393.64,PUCT Project 51878 Item 52 Attachment A (ERCOT 2021 4CP calculation)
+2021,7,2021-07-26,17:00,Monday,73305.14,PUCT Project 51878 Item 52 Attachment A (ERCOT 2021 4CP calculation)
+2021,8,2021-08-24,17:00,Tuesday,73822.00,PUCT Project 51878 Item 52 Attachment A (ERCOT 2021 4CP calculation)
+2021,9,2021-09-01,17:00,Wednesday,72440.52,PUCT Project 51878 Item 52 Attachment A (ERCOT 2021 4CP calculation)
+2022,6,2022-06-23,17:00,Thursday,76803.46,ERCOT report NP9-83-M 2022 4CP calculation workbook (posted 2022-11-28)
+2022,7,2022-07-20,16:45,Wednesday,80233.23,ERCOT report NP9-83-M 2022 4CP calculation workbook (posted 2022-11-28)
+2022,8,2022-08-02,17:00,Tuesday,78669.14,ERCOT report NP9-83-M 2022 4CP calculation workbook (posted 2022-11-28)
+2022,9,2022-09-20,17:00,Tuesday,71149.61,ERCOT report NP9-83-M 2022 4CP calculation workbook (posted 2022-11-28)
+2023,6,2023-06-27,17:00,Tuesday,81017.60,ERCOT report NP9-83-M 2023 4CP calculation workbook (posted 2023-11-27)
+2023,7,2023-07-31,17:00,Monday,83032.61,ERCOT report NP9-83-M 2023 4CP calculation workbook (posted 2023-11-27)
+2023,8,2023-08-10,17:00,Thursday,85636.88,ERCOT report NP9-83-M 2023 4CP calculation workbook (posted 2023-11-27)
+2023,9,2023-09-08,16:45,Friday,84540.29,ERCOT report NP9-83-M 2023 4CP calculation workbook (posted 2023-11-27)
+2024,6,2024-06-30,17:45,Sunday,79749.85,ERCOT report NP9-83-M 2024 4CP calculation workbook (posted 2024-11-25)
+2024,7,2024-07-01,17:00,Monday,81184.39,ERCOT report NP9-83-M 2024 4CP calculation workbook (posted 2024-11-25)
+2024,8,2024-08-20,17:00,Tuesday,85357.56,ERCOT report NP9-83-M 2024 4CP calculation workbook (posted 2024-11-25)
+2024,9,2024-09-20,16:00,Friday,77878.82,ERCOT report NP9-83-M 2024 4CP calculation workbook (posted 2024-11-25)
+2025,6,2025-06-19,17:00,Thursday,77485.83,ERCOT report NP9-83-M 2025 CP calculation workbook (posted 2025-11-24)
+2025,7,2025-07-30,17:00,Wednesday,81908.32,ERCOT report NP9-83-M 2025 CP calculation workbook (posted 2025-11-24)
+2025,8,2025-08-18,17:00,Monday,83968.46,ERCOT report NP9-83-M 2025 CP calculation workbook (posted 2025-11-24)
+2025,9,2025-09-04,17:30,Thursday,80076.47,ERCOT report NP9-83-M 2025 CP calculation workbook (posted 2025-11-24)

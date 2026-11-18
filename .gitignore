@@ -1,0 +1,17 @@
+# LaTeX build artefacts
+book/*.aux
+book/*.bbl
+book/*.bcf
+book/*.blg
+book/*.fdb_latexmk
+book/*.fls
+book/*.log
+book/*.out
+book/*.run.xml
+book/*.toc
+book/*.synctex.gz
+book/main.pdf
+# rebuilt locally by analysis/ch5-backtest/build_prices_db.py
+analysis/data/prices.db
+.DS_Store
+__pycache__/

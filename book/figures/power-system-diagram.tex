@@ -1,0 +1,49 @@
+% Original diagram (it replaced an unattributed PNG, since deleted).
+% Generation -> transmission -> distribution -> load chain with
+% step-up/step-down transformers drawn as overlapping circles, plus the
+% transmission-level tap that serves large sites (mines, data centers,
+% heavy industry) through their own step-down substation.
+\begin{tikzpicture}[
+  font=\small,
+  stage/.style={draw=black!70, rounded corners=2pt, thick, align=center,
+                minimum height=10mm, minimum width=23mm},
+  xfmr/.style={circle, draw=black!70, thick, minimum size=4.2mm, inner sep=0pt},
+  arr/.style={-{Stealth[length=2.2mm]}, thick, black!70},
+  note/.style={font=\scriptsize, text=black!55, align=center}
+]
+  \node[stage] (gen)  at (0,0)    {Generation};
+  \node[stage] (tx)   at (3.9,0)  {Transmission};
+  \node[stage] (dist) at (7.8,0)  {Distribution};
+  \node[stage] (load) at (11.7,0) {Load};
+  \node[stage] (big)  at (3.9,2.5) {Large site};
+
+  % step-up transformer between generation and transmission
+  \node[xfmr] (t1a) at (1.75,0) {};
+  \node[xfmr] (t1b) at (2.02,0) {};
+  \draw[arr] (gen) -- (t1a);
+  \draw[arr] (t1b) -- (tx);
+  \node[note] at (1.885,-0.55) {step-up\\transformer};
+
+  % step-down transformer between transmission and distribution
+  \node[xfmr] (t2a) at (5.65,0) {};
+  \node[xfmr] (t2b) at (5.92,0) {};
+  \draw[arr] (tx) -- (t2a);
+  \draw[arr] (t2b) -- (dist);
+  \node[note] at (5.785,-0.55) {step-down\\transformer};
+
+  \draw[arr] (dist) -- (load);
+
+  % transmission-level tap: the large site's own step-down substation
+  \node[xfmr] (t3a) at (3.9,1.115) {};
+  \node[xfmr] (t3b) at (3.9,1.385) {};
+  \draw[arr] (tx) -- (t3a);
+  \draw[arr] (t3b) -- (big);
+  \node[note, anchor=west] at (4.2,1.25) {site's own\\substation};
+
+  % stage annotations
+  \node[note] at (0,-1.25)    {power plants: gas, wind,\\solar, nuclear, hydro};
+  \node[note] at (3.9,-1.25)  {high voltage\\(69--765 kV)};
+  \node[note] at (7.8,-1.25)  {lower voltage\\(4--35 kV)};
+  \node[note] at (11.7,-1.25) {homes, businesses,\\smaller industry};
+  \node[note, anchor=west] at (5.2,2.5) {mines, data centers, heavy industry:\\served at transmission voltage};
+\end{tikzpicture}

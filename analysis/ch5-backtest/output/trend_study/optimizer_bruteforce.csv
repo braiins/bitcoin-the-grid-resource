@@ -1,0 +1,13 @@
+optimizer,series,miner,n_prices,n_nonpositive,min_price,max_price,reference,same_power_target,max_shortfall_usd_per_machine_hour,max_shortfall_at_price,total_shortfall_pct_of_oracle_profit,optimizer_above_search_usd,run_or_pause_disagreements,nonpositive_price_mismatches,grid_1w_checked,grid_1w_best_above_points_usd,closed_form_above_grid_usd_per_machine_hour,max_power_gap_w
+"engine, 10 W scan",rtm5 LZ_WEST,S21XP,124745,24745,-32.25,5000.32,9 operating points 2774-3990 W,124745,0.000e+00,,0.000e+00,0.0e+00,0,0,2000,0.0e+00,,
+"broken on purpose, 50 W scan",rtm5 LZ_WEST,S21XP,124745,24745,-32.25,5000.32,9 operating points 2774-3990 W,1379,9.759e-03,0.09,4.369e-01,0.0e+00,4,24745,,,,
+"parametric fit, closed form",rtm5 LZ_WEST,S21XP,2500,500,-31.63,956.54,1 W grid 2760-3990 W,,0.000e+00,,,,,0,,,4.230e-09,0.5
+"engine, 10 W scan",rtm5 LZ_WEST,S19jPro,124745,24745,-32.25,5000.32,14 operating points 1200-3420 W,124745,0.000e+00,,0.000e+00,0.0e+00,0,0,2000,0.0e+00,,
+"broken on purpose, 50 W scan",rtm5 LZ_WEST,S19jPro,124745,24745,-32.25,5000.32,14 operating points 1200-3420 W,29430,3.360e-03,0.09,3.291e-01,0.0e+00,0,24745,,,,
+"parametric fit, closed form",rtm5 LZ_WEST,S19jPro,2500,500,-29.71,1789.52,1 W grid 1630-3420 W,,0.000e+00,,,,,0,,,3.157e-09,0.5
+"engine, 10 W scan",rtm15 all 8 zones,S21XP,125469,25469,-228.75,4981.3,9 operating points 2774-3990 W,125469,0.000e+00,,0.000e+00,0.0e+00,0,0,2000,0.0e+00,,
+"broken on purpose, 50 W scan",rtm15 all 8 zones,S21XP,125469,25469,-228.75,4981.3,9 operating points 2774-3990 W,1095,9.700e-03,3.77,4.355e-01,0.0e+00,2,25469,,,,
+"parametric fit, closed form",rtm15 all 8 zones,S21XP,2500,500,-32.53,1482.43,1 W grid 2760-3990 W,,0.000e+00,,,,,0,,,3.399e-09,0.5
+"engine, 10 W scan",rtm15 all 8 zones,S19jPro,125469,25469,-228.75,4981.3,14 operating points 1200-3420 W,125469,0.000e+00,,0.000e+00,0.0e+00,0,0,2000,0.0e+00,,
+"broken on purpose, 50 W scan",rtm15 all 8 zones,S19jPro,125469,25469,-228.75,4981.3,14 operating points 1200-3420 W,17011,5.495e-03,-228.75,3.375e-01,0.0e+00,0,25469,,,,
+"parametric fit, closed form",rtm15 all 8 zones,S19jPro,2500,500,-32.11,2355.29,1 W grid 1630-3420 W,,0.000e+00,,,,,0,,,2.755e-09,0.49

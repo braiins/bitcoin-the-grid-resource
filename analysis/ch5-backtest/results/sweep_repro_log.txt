@@ -1,0 +1,299 @@
+breakeven sanity vs report: OK
+
+== TUNE-2024: 2024-01-01 .. 2025-01-01  (105396 intervals, 366 days) ==
+
+-- Antminer S21 XP --  S0 profit $5,579   S1 uplift $277 (curtail 0.77%)
+  persist                    hold30         uplift $      228   82.4%S1  d$      0 (+0.00%)  off 1.04%  chg/d  9.0  stop/d 0.27
+  persist                    hold30+db25    uplift $      233   84.2%S1  d$      5 (+2.27%)  off 1.04%  chg/d 11.0  stop/d 0.27
+  persist                    hold15         uplift $      231   83.4%S1  d$      3 (+1.25%)  off 1.04%  chg/d 14.8  stop/d 0.27
+  persist                    hold5          uplift $      236   85.5%S1  d$      9 (+3.83%)  off 1.04%  chg/d 30.5  stop/d 0.27
+  slope-end W10 g5           hold30         uplift $      223   80.6%S1  d$     -5 (-2.11%)  off 1.04%  chg/d 10.6  stop/d 0.27
+  slope-ols W10 g5           hold30         uplift $      223   80.6%S1  d$     -5 (-2.11%)  off 1.04%  chg/d 10.6  stop/d 0.27
+  slope-end W10 g10          hold30         uplift $      218   78.9%S1  d$    -10 (-4.24%)  off 1.04%  chg/d 11.8  stop/d 0.27
+  slope-ols W10 g10          hold30         uplift $      218   78.9%S1  d$    -10 (-4.24%)  off 1.04%  chg/d 11.8  stop/d 0.27
+  slope-end W10 g15          hold30         uplift $      213   77.1%S1  d$    -15 (-6.44%)  off 1.04%  chg/d 12.8  stop/d 0.27
+  slope-ols W10 g15          hold30         uplift $      213   77.1%S1  d$    -15 (-6.44%)  off 1.04%  chg/d 12.8  stop/d 0.27
+  slope-end W10 g30          hold30         uplift $      200   72.4%S1  d$    -28 (-12.14%)  off 1.04%  chg/d 15.0  stop/d 0.27
+  slope-ols W10 g30          hold30         uplift $      200   72.4%S1  d$    -28 (-12.14%)  off 1.04%  chg/d 15.0  stop/d 0.27
+  slope-end W15 g5           hold30         uplift $      224   81.0%S1  d$     -4 (-1.64%)  off 1.04%  chg/d 10.1  stop/d 0.27
+  slope-ols W15 g5           hold30         uplift $      224   81.0%S1  d$     -4 (-1.69%)  off 1.04%  chg/d 10.1  stop/d 0.27
+  slope-end W15 g10          hold30         uplift $      221   79.8%S1  d$     -7 (-3.14%)  off 1.04%  chg/d 11.0  stop/d 0.27
+  slope-ols W15 g10          hold30         uplift $      221   79.8%S1  d$     -7 (-3.07%)  off 1.04%  chg/d 11.0  stop/d 0.27
+  slope-end W15 g15          hold30         uplift $      217   78.6%S1  d$    -10 (-4.57%)  off 1.04%  chg/d 11.9  stop/d 0.27
+  slope-ols W15 g15          hold30         uplift $      217   78.7%S1  d$    -10 (-4.51%)  off 1.04%  chg/d 11.9  stop/d 0.27
+  slope-end W15 g30          hold30         uplift $      207   74.8%S1  d$    -21 (-9.24%)  off 1.04%  chg/d 13.8  stop/d 0.27
+  slope-ols W15 g30          hold30         uplift $      207   74.8%S1  d$    -21 (-9.17%)  off 1.04%  chg/d 13.8  stop/d 0.27
+  slope-end W20 g5           hold30         uplift $      225   81.4%S1  d$     -3 (-1.17%)  off 1.04%  chg/d  9.8  stop/d 0.27
+  slope-ols W20 g5           hold30         uplift $      225   81.4%S1  d$     -3 (-1.14%)  off 1.04%  chg/d  9.7  stop/d 0.27
+  slope-end W20 g10          hold30         uplift $      223   80.5%S1  d$     -5 (-2.23%)  off 1.04%  chg/d 10.5  stop/d 0.27
+  slope-ols W20 g10          hold30         uplift $      223   80.5%S1  d$     -5 (-2.24%)  off 1.04%  chg/d 10.6  stop/d 0.27
+  slope-end W20 g15          hold30         uplift $      220   79.6%S1  d$     -8 (-3.35%)  off 1.04%  chg/d 11.2  stop/d 0.27
+  slope-ols W20 g15          hold30         uplift $      220   79.6%S1  d$     -8 (-3.35%)  off 1.04%  chg/d 11.2  stop/d 0.27
+  slope-end W20 g30          hold30         uplift $      212   76.8%S1  d$    -15 (-6.73%)  off 1.04%  chg/d 12.9  stop/d 0.27
+  slope-ols W20 g30          hold30         uplift $      212   76.8%S1  d$    -15 (-6.72%)  off 1.04%  chg/d 12.8  stop/d 0.27
+  slope-end W30 g5           hold30         uplift $      225   81.5%S1  d$     -2 (-1.00%)  off 1.04%  chg/d  9.5  stop/d 0.27
+  slope-ols W30 g5           hold30         uplift $      226   81.6%S1  d$     -2 (-0.93%)  off 1.04%  chg/d  9.4  stop/d 0.27
+  slope-end W30 g10          hold30         uplift $      224   81.1%S1  d$     -4 (-1.57%)  off 1.04%  chg/d 10.1  stop/d 0.27
+  slope-ols W30 g10          hold30         uplift $      224   81.1%S1  d$     -3 (-1.53%)  off 1.04%  chg/d 10.0  stop/d 0.27
+  slope-end W30 g15          hold30         uplift $      223   80.6%S1  d$     -5 (-2.13%)  off 1.04%  chg/d 10.7  stop/d 0.27
+  slope-ols W30 g15          hold30         uplift $      223   80.6%S1  d$     -5 (-2.16%)  off 1.04%  chg/d 10.4  stop/d 0.27
+  slope-end W30 g30          hold30         uplift $      218   78.7%S1  d$    -10 (-4.42%)  off 1.04%  chg/d 12.0  stop/d 0.27
+  slope-ols W30 g30          hold30         uplift $      219   79.2%S1  d$     -9 (-3.87%)  off 1.04%  chg/d 11.8  stop/d 0.27
+  slope-end W60 g5           hold30         uplift $      227   82.0%S1  d$     -1 (-0.45%)  off 1.04%  chg/d  9.3  stop/d 0.27
+  slope-ols W60 g5           hold30         uplift $      227   82.1%S1  d$     -1 (-0.38%)  off 1.04%  chg/d  9.2  stop/d 0.27
+  slope-end W60 g10          hold30         uplift $      226   81.7%S1  d$     -2 (-0.77%)  off 1.04%  chg/d  9.5  stop/d 0.27
+  slope-ols W60 g10          hold30         uplift $      227   82.0%S1  d$     -1 (-0.46%)  off 1.04%  chg/d  9.3  stop/d 0.27
+  slope-end W60 g15          hold30         uplift $      225   81.5%S1  d$     -2 (-1.04%)  off 1.04%  chg/d  9.8  stop/d 0.27
+  slope-ols W60 g15          hold30         uplift $      226   81.8%S1  d$     -1 (-0.63%)  off 1.04%  chg/d  9.5  stop/d 0.27
+  slope-end W60 g30          hold30         uplift $      223   80.8%S1  d$     -4 (-1.92%)  off 1.04%  chg/d 10.5  stop/d 0.27
+  slope-ols W60 g30          hold30         uplift $      225   81.3%S1  d$     -3 (-1.27%)  off 1.04%  chg/d 10.1  stop/d 0.27
+  slope-asym W15 up15 dn5    hold30         uplift $      219   79.1%S1  d$     -9 (-3.95%)  off 1.04%  chg/d 11.9  stop/d 0.27
+  slope-asym W15 up30 dn10   hold30         uplift $      208   75.4%S1  d$    -19 (-8.49%)  off 1.04%  chg/d 13.9  stop/d 0.27
+  slope-asym W15 up30 dn0    hold30         uplift $      211   76.2%S1  d$    -17 (-7.53%)  off 1.04%  chg/d 13.8  stop/d 0.27
+  slope-asym W15 up15 dn0    hold30         uplift $      220   79.6%S1  d$     -8 (-3.36%)  off 1.04%  chg/d 11.8  stop/d 0.27
+  slope-asym W30 up15 dn5    hold30         uplift $      224   81.0%S1  d$     -4 (-1.61%)  off 1.04%  chg/d 10.5  stop/d 0.27
+  slope-asym W30 up30 dn10   hold30         uplift $      220   79.6%S1  d$     -8 (-3.39%)  off 1.04%  chg/d 11.8  stop/d 0.27
+  slope-asym W30 up30 dn0    hold30         uplift $      222   80.3%S1  d$     -6 (-2.54%)  off 1.04%  chg/d 11.9  stop/d 0.27
+  slope-asym W30 up15 dn0    hold30         uplift $      225   81.5%S1  d$     -2 (-1.04%)  off 1.04%  chg/d 10.5  stop/d 0.27
+  ewma hl10                  hold30         uplift $      230   83.1%S1  d$      2 (+0.90%)  off 1.04%  chg/d  6.9  stop/d 0.27
+  ewma hl15                  hold30         uplift $      229   82.9%S1  d$      1 (+0.62%)  off 1.04%  chg/d  6.6  stop/d 0.27
+  ewma hl30                  hold30         uplift $      228   82.4%S1  d$      0 (+0.05%)  off 1.04%  chg/d  6.2  stop/d 0.27
+  quant W15 q60              hold30         uplift $      229   82.8%S1  d$      1 (+0.51%)  off 1.04%  chg/d  7.6  stop/d 0.27
+  quant W15 q75              hold30         uplift $      228   82.4%S1  d$      0 (+0.02%)  off 1.04%  chg/d  8.3  stop/d 0.27
+  quant W15 q90              hold30         uplift $      225   81.5%S1  d$     -2 (-1.01%)  off 1.04%  chg/d  9.0  stop/d 0.27
+  quant W15 q100             hold30         uplift $      224   81.1%S1  d$     -4 (-1.59%)  off 1.04%  chg/d  9.4  stop/d 0.27
+  quant W30 q60              hold30         uplift $      229   82.7%S1  d$      1 (+0.41%)  off 1.04%  chg/d  7.0  stop/d 0.27
+  quant W30 q75              hold30         uplift $      227   82.0%S1  d$     -1 (-0.41%)  off 1.04%  chg/d  7.9  stop/d 0.27
+  quant W30 q90              hold30         uplift $      221   80.1%S1  d$     -6 (-2.76%)  off 1.04%  chg/d  8.9  stop/d 0.27
+  quant W30 q100             hold30         uplift $      219   79.1%S1  d$     -9 (-3.92%)  off 1.04%  chg/d  9.2  stop/d 0.27
+  quant W60 q60              hold30         uplift $      227   81.9%S1  d$     -1 (-0.55%)  off 1.04%  chg/d  6.3  stop/d 0.27
+  quant W60 q75              hold30         uplift $      224   81.2%S1  d$     -3 (-1.45%)  off 1.04%  chg/d  7.1  stop/d 0.27
+  quant W60 q90              hold30         uplift $      217   78.6%S1  d$    -10 (-4.58%)  off 1.04%  chg/d  8.1  stop/d 0.27
+  quant W60 q100             hold30         uplift $      208   75.2%S1  d$    -20 (-8.69%)  off 1.04%  chg/d  7.7  stop/d 0.27
+  bias +$5                   hold30         uplift $      227   82.1%S1  d$     -1 (-0.32%)  off 1.04%  chg/d 10.1  stop/d 0.27
+  bias +$10                  hold30         uplift $      225   81.5%S1  d$     -2 (-1.02%)  off 1.04%  chg/d 11.2  stop/d 0.27
+  bias +$20                  hold30         uplift $      219   79.2%S1  d$     -9 (-3.83%)  off 1.04%  chg/d 14.0  stop/d 0.27
+  bias +$40                  hold30         uplift $      166   60.1%S1  d$    -61 (-26.99%)  off 1.04%  chg/d 23.6  stop/d 0.27
+
+-- Antminer S19j Pro --  S0 profit $1,586   S1 uplift $280 (curtail 4.39%)
+  persist                    hold30         uplift $      235   84.0%S1  d$      0 (+0.00%)  off 3.62%  chg/d 11.4  stop/d 0.58
+  persist                    hold30+db25    uplift $      244   87.3%S1  d$      9 (+3.95%)  off 3.62%  chg/d 17.5  stop/d 0.58
+  persist                    hold15         uplift $      238   85.1%S1  d$      3 (+1.38%)  off 3.62%  chg/d 19.7  stop/d 0.58
+  persist                    hold5          uplift $      246   88.2%S1  d$     12 (+4.97%)  off 3.62%  chg/d 43.0  stop/d 0.58
+  slope-end W10 g5           hold30         uplift $      230   82.2%S1  d$     -5 (-2.11%)  off 3.62%  chg/d 12.7  stop/d 0.58
+  slope-ols W10 g5           hold30         uplift $      230   82.2%S1  d$     -5 (-2.11%)  off 3.62%  chg/d 12.7  stop/d 0.58
+  slope-end W10 g10          hold30         uplift $      225   80.5%S1  d$    -10 (-4.11%)  off 3.62%  chg/d 13.7  stop/d 0.58
+  slope-ols W10 g10          hold30         uplift $      225   80.5%S1  d$    -10 (-4.11%)  off 3.62%  chg/d 13.7  stop/d 0.58
+  slope-end W10 g15          hold30         uplift $      220   78.8%S1  d$    -14 (-6.14%)  off 3.62%  chg/d 14.6  stop/d 0.58
+  slope-ols W10 g15          hold30         uplift $      220   78.8%S1  d$    -14 (-6.14%)  off 3.62%  chg/d 14.6  stop/d 0.58
+  slope-end W10 g30          hold30         uplift $      208   74.5%S1  d$    -27 (-11.34%)  off 3.62%  chg/d 16.6  stop/d 0.58
+  slope-ols W10 g30          hold30         uplift $      208   74.5%S1  d$    -27 (-11.34%)  off 3.62%  chg/d 16.6  stop/d 0.58
+  slope-end W15 g5           hold30         uplift $      231   82.8%S1  d$     -3 (-1.46%)  off 3.62%  chg/d 12.3  stop/d 0.58
+  slope-ols W15 g5           hold30         uplift $      231   82.6%S1  d$     -4 (-1.59%)  off 3.62%  chg/d 12.3  stop/d 0.58
+  slope-end W15 g10          hold30         uplift $      227   81.2%S1  d$     -8 (-3.35%)  off 3.62%  chg/d 13.1  stop/d 0.58
+  slope-ols W15 g10          hold30         uplift $      227   81.0%S1  d$     -8 (-3.48%)  off 3.62%  chg/d 13.1  stop/d 0.58
+  slope-end W15 g15          hold30         uplift $      223   79.8%S1  d$    -12 (-5.01%)  off 3.62%  chg/d 13.8  stop/d 0.58
+  slope-ols W15 g15          hold30         uplift $      223   79.6%S1  d$    -12 (-5.18%)  off 3.62%  chg/d 13.8  stop/d 0.58
+  slope-end W15 g30          hold30         uplift $      213   76.4%S1  d$    -21 (-9.06%)  off 3.62%  chg/d 15.3  stop/d 0.58
+  slope-ols W15 g30          hold30         uplift $      213   76.3%S1  d$    -21 (-9.10%)  off 3.62%  chg/d 15.4  stop/d 0.58
+  slope-end W20 g5           hold30         uplift $      232   83.0%S1  d$     -3 (-1.22%)  off 3.62%  chg/d 12.1  stop/d 0.58
+  slope-ols W20 g5           hold30         uplift $      232   82.8%S1  d$     -3 (-1.35%)  off 3.62%  chg/d 12.1  stop/d 0.58
+  slope-end W20 g10          hold30         uplift $      229   81.9%S1  d$     -6 (-2.46%)  off 3.62%  chg/d 12.8  stop/d 0.58
+  slope-ols W20 g10          hold30         uplift $      229   81.9%S1  d$     -6 (-2.50%)  off 3.62%  chg/d 12.7  stop/d 0.58
+  slope-end W20 g15          hold30         uplift $      226   80.8%S1  d$     -9 (-3.74%)  off 3.62%  chg/d 13.3  stop/d 0.58
+  slope-ols W20 g15          hold30         uplift $      226   80.8%S1  d$     -9 (-3.72%)  off 3.62%  chg/d 13.3  stop/d 0.58
+  slope-end W20 g30          hold30         uplift $      218   77.9%S1  d$    -17 (-7.19%)  off 3.62%  chg/d 14.7  stop/d 0.58
+  slope-ols W20 g30          hold30         uplift $      219   78.3%S1  d$    -16 (-6.70%)  off 3.62%  chg/d 14.6  stop/d 0.58
+  slope-end W30 g5           hold30         uplift $      233   83.4%S1  d$     -2 (-0.72%)  off 3.62%  chg/d 11.9  stop/d 0.58
+  slope-ols W30 g5           hold30         uplift $      233   83.4%S1  d$     -2 (-0.71%)  off 3.62%  chg/d 11.9  stop/d 0.58
+  slope-end W30 g10          hold30         uplift $      231   82.7%S1  d$     -4 (-1.55%)  off 3.62%  chg/d 12.4  stop/d 0.58
+  slope-ols W30 g10          hold30         uplift $      232   82.8%S1  d$     -3 (-1.38%)  off 3.62%  chg/d 12.3  stop/d 0.58
+  slope-end W30 g15          hold30         uplift $      229   81.8%S1  d$     -6 (-2.57%)  off 3.62%  chg/d 13.0  stop/d 0.58
+  slope-ols W30 g15          hold30         uplift $      230   82.2%S1  d$     -5 (-2.08%)  off 3.62%  chg/d 12.7  stop/d 0.58
+  slope-end W30 g30          hold30         uplift $      223   79.8%S1  d$    -12 (-4.92%)  off 3.62%  chg/d 14.0  stop/d 0.58
+  slope-ols W30 g30          hold30         uplift $      224   80.3%S1  d$    -10 (-4.41%)  off 3.62%  chg/d 13.6  stop/d 0.58
+  slope-end W60 g5           hold30         uplift $      234   83.6%S1  d$     -1 (-0.40%)  off 3.62%  chg/d 11.6  stop/d 0.58
+  slope-ols W60 g5           hold30         uplift $      234   83.8%S1  d$     -1 (-0.23%)  off 3.62%  chg/d 11.5  stop/d 0.58
+  slope-end W60 g10          hold30         uplift $      233   83.4%S1  d$     -2 (-0.68%)  off 3.62%  chg/d 11.7  stop/d 0.58
+  slope-ols W60 g10          hold30         uplift $      234   83.7%S1  d$     -1 (-0.37%)  off 3.62%  chg/d 11.6  stop/d 0.58
+  slope-end W60 g15          hold30         uplift $      233   83.3%S1  d$     -2 (-0.78%)  off 3.62%  chg/d 11.9  stop/d 0.58
+  slope-ols W60 g15          hold30         uplift $      233   83.5%S1  d$     -1 (-0.61%)  off 3.62%  chg/d 11.8  stop/d 0.58
+  slope-end W60 g30          hold30         uplift $      230   82.2%S1  d$     -5 (-2.06%)  off 3.62%  chg/d 12.5  stop/d 0.58
+  slope-ols W60 g30          hold30         uplift $      231   82.7%S1  d$     -4 (-1.52%)  off 3.62%  chg/d 12.2  stop/d 0.58
+  slope-asym W15 up15 dn5    hold30         uplift $      225   80.5%S1  d$    -10 (-4.15%)  off 3.62%  chg/d 13.9  stop/d 0.58
+  slope-asym W15 up30 dn10   hold30         uplift $      216   77.3%S1  d$    -19 (-7.96%)  off 3.62%  chg/d 15.5  stop/d 0.58
+  slope-asym W15 up30 dn0    hold30         uplift $      220   78.5%S1  d$    -15 (-6.45%)  off 3.62%  chg/d 15.5  stop/d 0.58
+  slope-asym W15 up15 dn0    hold30         uplift $      227   81.3%S1  d$     -8 (-3.22%)  off 3.62%  chg/d 13.8  stop/d 0.58
+  slope-asym W30 up15 dn5    hold30         uplift $      231   82.8%S1  d$     -3 (-1.41%)  off 3.62%  chg/d 12.7  stop/d 0.58
+  slope-asym W30 up30 dn10   hold30         uplift $      226   80.9%S1  d$     -8 (-3.61%)  off 3.62%  chg/d 13.7  stop/d 0.58
+  slope-asym W30 up30 dn0    hold30         uplift $      228   81.7%S1  d$     -6 (-2.67%)  off 3.62%  chg/d 13.8  stop/d 0.58
+  slope-asym W30 up15 dn0    hold30         uplift $      233   83.2%S1  d$     -2 (-0.92%)  off 3.62%  chg/d 12.8  stop/d 0.58
+  ewma hl10                  hold30         uplift $      236   84.5%S1  d$      2 (+0.66%)  off 3.62%  chg/d  9.9  stop/d 0.58
+  ewma hl15                  hold30         uplift $      235   84.1%S1  d$      0 (+0.16%)  off 3.62%  chg/d  9.5  stop/d 0.58
+  ewma hl30                  hold30         uplift $      234   83.6%S1  d$     -1 (-0.47%)  off 3.62%  chg/d  9.2  stop/d 0.58
+  quant W15 q60              hold30         uplift $      235   84.1%S1  d$      0 (+0.13%)  off 3.62%  chg/d 10.5  stop/d 0.58
+  quant W15 q75              hold30         uplift $      235   83.9%S1  d$     -0 (-0.03%)  off 3.62%  chg/d 11.0  stop/d 0.58
+  quant W15 q90              hold30         uplift $      233   83.4%S1  d$     -2 (-0.66%)  off 3.62%  chg/d 11.3  stop/d 0.58
+  quant W15 q100             hold30         uplift $      232   82.8%S1  d$     -3 (-1.36%)  off 3.62%  chg/d 11.5  stop/d 0.58
+  quant W30 q60              hold30         uplift $      234   83.9%S1  d$     -0 (-0.11%)  off 3.62%  chg/d  9.9  stop/d 0.58
+  quant W30 q75              hold30         uplift $      233   83.2%S1  d$     -2 (-0.90%)  off 3.62%  chg/d 10.4  stop/d 0.58
+  quant W30 q90              hold30         uplift $      228   81.5%S1  d$     -7 (-2.89%)  off 3.62%  chg/d 10.9  stop/d 0.58
+  quant W30 q100             hold30         uplift $      225   80.5%S1  d$    -10 (-4.12%)  off 3.62%  chg/d 10.8  stop/d 0.58
+  quant W60 q60              hold30         uplift $      231   82.7%S1  d$     -3 (-1.48%)  off 3.62%  chg/d  9.0  stop/d 0.58
+  quant W60 q75              hold30         uplift $      228   81.7%S1  d$     -6 (-2.69%)  off 3.62%  chg/d  9.5  stop/d 0.58
+  quant W60 q90              hold30         uplift $      220   78.7%S1  d$    -15 (-6.24%)  off 3.62%  chg/d 10.1  stop/d 0.58
+  quant W60 q100             hold30         uplift $      211   75.5%S1  d$    -24 (-10.02%)  off 3.62%  chg/d  9.1  stop/d 0.58
+  bias +$5                   hold30         uplift $      234   83.7%S1  d$     -1 (-0.35%)  off 3.62%  chg/d 12.8  stop/d 0.58
+  bias +$10                  hold30         uplift $      231   82.7%S1  d$     -3 (-1.49%)  off 3.62%  chg/d 14.2  stop/d 0.58
+  bias +$20                  hold30         uplift $      215   76.8%S1  d$    -20 (-8.47%)  off 3.62%  chg/d 18.9  stop/d 0.58
+  bias +$40                  hold30         uplift $       95   33.9%S1  d$   -140 (-59.65%)  off 3.62%  chg/d 21.0  stop/d 0.58
+
+== TEST-2025-26: 2025-01-01 .. 2026-06-24  (154975 intervals, 538 days) ==
+
+-- Antminer S21 XP --  S0 profit $5,135   S1 uplift $273 (curtail 1.53%)
+  persist                    hold30         uplift $      250   91.7%S1  d$      0 (+0.00%)  off 1.51%  chg/d 13.3  stop/d 0.15
+  persist                    hold30+db25    uplift $      253   92.8%S1  d$      3 (+1.18%)  off 1.51%  chg/d 14.1  stop/d 0.15
+  persist                    hold15         uplift $      254   93.1%S1  d$      4 (+1.55%)  off 1.51%  chg/d 22.5  stop/d 0.15
+  persist                    hold5          uplift $      257   94.3%S1  d$      7 (+2.83%)  off 1.51%  chg/d 53.4  stop/d 0.15
+  slope-end W10 g5           hold30         uplift $      247   90.7%S1  d$     -3 (-1.09%)  off 1.51%  chg/d 14.7  stop/d 0.15
+  slope-ols W10 g5           hold30         uplift $      247   90.7%S1  d$     -3 (-1.09%)  off 1.51%  chg/d 14.7  stop/d 0.15
+  slope-end W10 g10          hold30         uplift $      243   89.2%S1  d$     -7 (-2.67%)  off 1.51%  chg/d 16.2  stop/d 0.15
+  slope-ols W10 g10          hold30         uplift $      243   89.2%S1  d$     -7 (-2.67%)  off 1.51%  chg/d 16.2  stop/d 0.15
+  slope-end W10 g15          hold30         uplift $      238   87.3%S1  d$    -12 (-4.75%)  off 1.51%  chg/d 17.3  stop/d 0.15
+  slope-ols W10 g15          hold30         uplift $      238   87.3%S1  d$    -12 (-4.75%)  off 1.51%  chg/d 17.3  stop/d 0.15
+  slope-end W10 g30          hold30         uplift $      223   81.9%S1  d$    -27 (-10.62%)  off 1.51%  chg/d 20.0  stop/d 0.15
+  slope-ols W10 g30          hold30         uplift $      223   81.9%S1  d$    -27 (-10.62%)  off 1.51%  chg/d 20.0  stop/d 0.15
+  slope-end W15 g5           hold30         uplift $      248   90.9%S1  d$     -2 (-0.82%)  off 1.51%  chg/d 14.4  stop/d 0.15
+  slope-ols W15 g5           hold30         uplift $      248   90.9%S1  d$     -2 (-0.84%)  off 1.51%  chg/d 14.4  stop/d 0.15
+  slope-end W15 g10          hold30         uplift $      246   90.1%S1  d$     -4 (-1.76%)  off 1.51%  chg/d 15.5  stop/d 0.15
+  slope-ols W15 g10          hold30         uplift $      245   90.0%S1  d$     -5 (-1.81%)  off 1.51%  chg/d 15.5  stop/d 0.15
+  slope-end W15 g15          hold30         uplift $      242   88.7%S1  d$     -8 (-3.22%)  off 1.51%  chg/d 16.3  stop/d 0.15
+  slope-ols W15 g15          hold30         uplift $      242   88.8%S1  d$     -8 (-3.18%)  off 1.51%  chg/d 16.4  stop/d 0.15
+  slope-end W15 g30          hold30         uplift $      232   85.0%S1  d$    -18 (-7.23%)  off 1.51%  chg/d 18.6  stop/d 0.15
+  slope-ols W15 g30          hold30         uplift $      231   84.9%S1  d$    -19 (-7.40%)  off 1.51%  chg/d 18.6  stop/d 0.15
+  slope-end W20 g5           hold30         uplift $      248   91.1%S1  d$     -2 (-0.64%)  off 1.51%  chg/d 14.1  stop/d 0.15
+  slope-ols W20 g5           hold30         uplift $      248   91.1%S1  d$     -2 (-0.61%)  off 1.51%  chg/d 14.1  stop/d 0.15
+  slope-end W20 g10          hold30         uplift $      247   90.5%S1  d$     -3 (-1.34%)  off 1.51%  chg/d 15.1  stop/d 0.15
+  slope-ols W20 g10          hold30         uplift $      247   90.5%S1  d$     -3 (-1.31%)  off 1.51%  chg/d 15.0  stop/d 0.15
+  slope-end W20 g15          hold30         uplift $      244   89.5%S1  d$     -6 (-2.38%)  off 1.51%  chg/d 15.9  stop/d 0.15
+  slope-ols W20 g15          hold30         uplift $      244   89.5%S1  d$     -6 (-2.35%)  off 1.51%  chg/d 15.8  stop/d 0.15
+  slope-end W20 g30          hold30         uplift $      236   86.7%S1  d$    -14 (-5.48%)  off 1.51%  chg/d 17.6  stop/d 0.15
+  slope-ols W20 g30          hold30         uplift $      237   86.7%S1  d$    -13 (-5.39%)  off 1.51%  chg/d 17.6  stop/d 0.15
+  slope-end W30 g5           hold30         uplift $      249   91.3%S1  d$     -1 (-0.38%)  off 1.51%  chg/d 13.9  stop/d 0.15
+  slope-ols W30 g5           hold30         uplift $      249   91.4%S1  d$     -1 (-0.34%)  off 1.51%  chg/d 13.9  stop/d 0.15
+  slope-end W30 g10          hold30         uplift $      248   90.9%S1  d$     -2 (-0.86%)  off 1.51%  chg/d 14.5  stop/d 0.15
+  slope-ols W30 g10          hold30         uplift $      248   90.9%S1  d$     -2 (-0.86%)  off 1.51%  chg/d 14.5  stop/d 0.15
+  slope-end W30 g15          hold30         uplift $      246   90.4%S1  d$     -4 (-1.44%)  off 1.51%  chg/d 15.2  stop/d 0.15
+  slope-ols W30 g15          hold30         uplift $      246   90.4%S1  d$     -3 (-1.40%)  off 1.51%  chg/d 15.0  stop/d 0.15
+  slope-end W30 g30          hold30         uplift $      241   88.4%S1  d$     -9 (-3.55%)  off 1.51%  chg/d 16.5  stop/d 0.15
+  slope-ols W30 g30          hold30         uplift $      241   88.5%S1  d$     -9 (-3.41%)  off 1.51%  chg/d 16.4  stop/d 0.15
+  slope-end W60 g5           hold30         uplift $      250   91.5%S1  d$     -0 (-0.13%)  off 1.51%  chg/d 13.5  stop/d 0.15
+  slope-ols W60 g5           hold30         uplift $      250   91.6%S1  d$     -0 (-0.12%)  off 1.51%  chg/d 13.4  stop/d 0.15
+  slope-end W60 g10          hold30         uplift $      249   91.3%S1  d$     -1 (-0.45%)  off 1.51%  chg/d 13.8  stop/d 0.15
+  slope-ols W60 g10          hold30         uplift $      249   91.3%S1  d$     -1 (-0.41%)  off 1.51%  chg/d 13.6  stop/d 0.15
+  slope-end W60 g15          hold30         uplift $      248   90.9%S1  d$     -2 (-0.85%)  off 1.51%  chg/d 14.0  stop/d 0.15
+  slope-ols W60 g15          hold30         uplift $      248   91.1%S1  d$     -2 (-0.63%)  off 1.51%  chg/d 13.9  stop/d 0.15
+  slope-end W60 g30          hold30         uplift $      245   90.0%S1  d$     -5 (-1.85%)  off 1.51%  chg/d 14.6  stop/d 0.15
+  slope-ols W60 g30          hold30         uplift $      246   90.2%S1  d$     -4 (-1.65%)  off 1.51%  chg/d 14.4  stop/d 0.15
+  slope-asym W15 up15 dn5    hold30         uplift $      245   89.7%S1  d$     -5 (-2.20%)  off 1.51%  chg/d 16.1  stop/d 0.15
+  slope-asym W15 up30 dn10   hold30         uplift $      236   86.5%S1  d$    -14 (-5.62%)  off 1.51%  chg/d 18.4  stop/d 0.15
+  slope-asym W15 up30 dn0    hold30         uplift $      238   87.4%S1  d$    -12 (-4.67%)  off 1.51%  chg/d 18.0  stop/d 0.15
+  slope-asym W15 up15 dn0    hold30         uplift $      246   90.0%S1  d$     -4 (-1.77%)  off 1.51%  chg/d 15.9  stop/d 0.15
+  slope-asym W30 up15 dn5    hold30         uplift $      248   90.9%S1  d$     -2 (-0.86%)  off 1.51%  chg/d 14.9  stop/d 0.15
+  slope-asym W30 up30 dn10   hold30         uplift $      244   89.5%S1  d$     -6 (-2.32%)  off 1.51%  chg/d 16.4  stop/d 0.15
+  slope-asym W30 up30 dn0    hold30         uplift $      245   90.0%S1  d$     -5 (-1.87%)  off 1.51%  chg/d 16.1  stop/d 0.15
+  slope-asym W30 up15 dn0    hold30         uplift $      248   91.0%S1  d$     -2 (-0.69%)  off 1.51%  chg/d 14.8  stop/d 0.15
+  ewma hl10                  hold30         uplift $      249   91.3%S1  d$     -1 (-0.45%)  off 1.51%  chg/d 11.8  stop/d 0.15
+  ewma hl15                  hold30         uplift $      248   90.9%S1  d$     -2 (-0.81%)  off 1.51%  chg/d 11.5  stop/d 0.15
+  ewma hl30                  hold30         uplift $      246   90.3%S1  d$     -4 (-1.45%)  off 1.51%  chg/d 11.1  stop/d 0.15
+  quant W15 q60              hold30         uplift $      248   91.0%S1  d$     -2 (-0.76%)  off 1.51%  chg/d 12.4  stop/d 0.15
+  quant W15 q75              hold30         uplift $      248   90.8%S1  d$     -2 (-0.96%)  off 1.51%  chg/d 12.9  stop/d 0.15
+  quant W15 q90              hold30         uplift $      246   90.3%S1  d$     -4 (-1.46%)  off 1.51%  chg/d 13.2  stop/d 0.15
+  quant W15 q100             hold30         uplift $      245   90.0%S1  d$     -5 (-1.81%)  off 1.51%  chg/d 13.5  stop/d 0.15
+  quant W30 q60              hold30         uplift $      247   90.5%S1  d$     -3 (-1.33%)  off 1.51%  chg/d 12.0  stop/d 0.15
+  quant W30 q75              hold30         uplift $      245   89.9%S1  d$     -5 (-1.94%)  off 1.51%  chg/d 12.6  stop/d 0.15
+  quant W30 q90              hold30         uplift $      242   88.9%S1  d$     -8 (-3.05%)  off 1.51%  chg/d 13.2  stop/d 0.15
+  quant W30 q100             hold30         uplift $      240   88.2%S1  d$    -10 (-3.83%)  off 1.51%  chg/d 13.4  stop/d 0.15
+  quant W60 q60              hold30         uplift $      243   89.2%S1  d$     -7 (-2.72%)  off 1.51%  chg/d 11.4  stop/d 0.15
+  quant W60 q75              hold30         uplift $      241   88.3%S1  d$     -9 (-3.63%)  off 1.51%  chg/d 12.0  stop/d 0.15
+  quant W60 q90              hold30         uplift $      235   86.2%S1  d$    -15 (-6.00%)  off 1.51%  chg/d 12.6  stop/d 0.15
+  quant W60 q100             hold30         uplift $      229   84.2%S1  d$    -21 (-8.20%)  off 1.51%  chg/d 11.7  stop/d 0.15
+  bias +$5                   hold30         uplift $      248   90.9%S1  d$     -2 (-0.81%)  off 1.51%  chg/d 15.1  stop/d 0.15
+  bias +$10                  hold30         uplift $      243   89.2%S1  d$     -7 (-2.74%)  off 1.51%  chg/d 16.8  stop/d 0.15
+  bias +$20                  hold30         uplift $      220   80.5%S1  d$    -30 (-12.16%)  off 1.51%  chg/d 20.2  stop/d 0.15
+  bias +$40                  hold30         uplift $      103   37.6%S1  d$   -147 (-58.96%)  off 1.51%  chg/d 24.3  stop/d 0.15
+
+-- Antminer S19j Pro --  S0 profit $1,102   S1 uplift $355 (curtail 8.46%)
+  persist                    hold30         uplift $      327   92.1%S1  d$      0 (+0.00%)  off 6.83%  chg/d 15.8  stop/d 0.50
+  persist                    hold30+db25    uplift $      334   94.1%S1  d$      7 (+2.15%)  off 6.83%  chg/d 19.2  stop/d 0.50
+  persist                    hold15         uplift $      333   93.7%S1  d$      6 (+1.77%)  off 6.83%  chg/d 27.6  stop/d 0.50
+  persist                    hold5          uplift $      337   95.0%S1  d$     10 (+3.13%)  off 6.83%  chg/d 66.6  stop/d 0.50
+  slope-end W10 g5           hold30         uplift $      325   91.4%S1  d$     -2 (-0.73%)  off 6.83%  chg/d 17.2  stop/d 0.50
+  slope-ols W10 g5           hold30         uplift $      325   91.4%S1  d$     -2 (-0.72%)  off 6.83%  chg/d 17.2  stop/d 0.50
+  slope-end W10 g10          hold30         uplift $      320   90.1%S1  d$     -7 (-2.18%)  off 6.83%  chg/d 18.3  stop/d 0.50
+  slope-ols W10 g10          hold30         uplift $      320   90.1%S1  d$     -7 (-2.18%)  off 6.83%  chg/d 18.3  stop/d 0.50
+  slope-end W10 g15          hold30         uplift $      315   88.7%S1  d$    -12 (-3.73%)  off 6.83%  chg/d 19.4  stop/d 0.50
+  slope-ols W10 g15          hold30         uplift $      315   88.7%S1  d$    -12 (-3.73%)  off 6.83%  chg/d 19.4  stop/d 0.50
+  slope-end W10 g30          hold30         uplift $      300   84.4%S1  d$    -27 (-8.35%)  off 6.83%  chg/d 21.8  stop/d 0.50
+  slope-ols W10 g30          hold30         uplift $      300   84.4%S1  d$    -27 (-8.35%)  off 6.83%  chg/d 21.8  stop/d 0.50
+  slope-end W15 g5           hold30         uplift $      325   91.6%S1  d$     -2 (-0.52%)  off 6.83%  chg/d 16.8  stop/d 0.50
+  slope-ols W15 g5           hold30         uplift $      326   91.6%S1  d$     -2 (-0.51%)  off 6.83%  chg/d 16.8  stop/d 0.50
+  slope-end W15 g10          hold30         uplift $      322   90.7%S1  d$     -5 (-1.52%)  off 6.83%  chg/d 17.7  stop/d 0.50
+  slope-ols W15 g10          hold30         uplift $      322   90.7%S1  d$     -5 (-1.54%)  off 6.83%  chg/d 17.6  stop/d 0.50
+  slope-end W15 g15          hold30         uplift $      319   89.7%S1  d$     -9 (-2.62%)  off 6.83%  chg/d 18.5  stop/d 0.50
+  slope-ols W15 g15          hold30         uplift $      319   89.7%S1  d$     -9 (-2.61%)  off 6.83%  chg/d 18.5  stop/d 0.50
+  slope-end W15 g30          hold30         uplift $      308   86.6%S1  d$    -20 (-5.99%)  off 6.83%  chg/d 20.5  stop/d 0.50
+  slope-ols W15 g30          hold30         uplift $      308   86.7%S1  d$    -19 (-5.84%)  off 6.83%  chg/d 20.5  stop/d 0.50
+  slope-end W20 g5           hold30         uplift $      326   91.7%S1  d$     -1 (-0.39%)  off 6.83%  chg/d 16.6  stop/d 0.50
+  slope-ols W20 g5           hold30         uplift $      326   91.8%S1  d$     -1 (-0.34%)  off 6.83%  chg/d 16.5  stop/d 0.50
+  slope-end W20 g10          hold30         uplift $      324   91.1%S1  d$     -4 (-1.07%)  off 6.83%  chg/d 17.3  stop/d 0.50
+  slope-ols W20 g10          hold30         uplift $      324   91.1%S1  d$     -3 (-1.06%)  off 6.83%  chg/d 17.2  stop/d 0.50
+  slope-end W20 g15          hold30         uplift $      321   90.3%S1  d$     -6 (-1.94%)  off 6.83%  chg/d 17.9  stop/d 0.50
+  slope-ols W20 g15          hold30         uplift $      321   90.5%S1  d$     -6 (-1.78%)  off 6.83%  chg/d 17.9  stop/d 0.50
+  slope-end W20 g30          hold30         uplift $      313   88.1%S1  d$    -14 (-4.30%)  off 6.83%  chg/d 19.6  stop/d 0.50
+  slope-ols W20 g30          hold30         uplift $      313   88.0%S1  d$    -14 (-4.41%)  off 6.83%  chg/d 19.4  stop/d 0.50
+  slope-end W30 g5           hold30         uplift $      326   91.8%S1  d$     -1 (-0.28%)  off 6.83%  chg/d 16.4  stop/d 0.50
+  slope-ols W30 g5           hold30         uplift $      326   91.8%S1  d$     -1 (-0.27%)  off 6.83%  chg/d 16.3  stop/d 0.50
+  slope-end W30 g10          hold30         uplift $      325   91.5%S1  d$     -2 (-0.65%)  off 6.83%  chg/d 16.9  stop/d 0.50
+  slope-ols W30 g10          hold30         uplift $      325   91.5%S1  d$     -2 (-0.66%)  off 6.83%  chg/d 16.8  stop/d 0.50
+  slope-end W30 g15          hold30         uplift $      324   91.1%S1  d$     -4 (-1.09%)  off 6.83%  chg/d 17.4  stop/d 0.50
+  slope-ols W30 g15          hold30         uplift $      323   91.0%S1  d$     -4 (-1.14%)  off 6.83%  chg/d 17.2  stop/d 0.50
+  slope-end W30 g30          hold30         uplift $      318   89.6%S1  d$     -9 (-2.75%)  off 6.83%  chg/d 18.5  stop/d 0.50
+  slope-ols W30 g30          hold30         uplift $      318   89.6%S1  d$     -9 (-2.71%)  off 6.83%  chg/d 18.3  stop/d 0.50
+  slope-end W60 g5           hold30         uplift $      327   92.0%S1  d$     -0 (-0.11%)  off 6.83%  chg/d 16.1  stop/d 0.50
+  slope-ols W60 g5           hold30         uplift $      327   92.0%S1  d$     -0 (-0.09%)  off 6.83%  chg/d 16.0  stop/d 0.50
+  slope-end W60 g10          hold30         uplift $      326   91.9%S1  d$     -1 (-0.26%)  off 6.83%  chg/d 16.2  stop/d 0.50
+  slope-ols W60 g10          hold30         uplift $      326   91.9%S1  d$     -1 (-0.23%)  off 6.83%  chg/d 16.1  stop/d 0.50
+  slope-end W60 g15          hold30         uplift $      326   91.6%S1  d$     -2 (-0.49%)  off 6.83%  chg/d 16.3  stop/d 0.50
+  slope-ols W60 g15          hold30         uplift $      326   91.7%S1  d$     -1 (-0.43%)  off 6.83%  chg/d 16.3  stop/d 0.50
+  slope-end W60 g30          hold30         uplift $      322   90.8%S1  d$     -5 (-1.46%)  off 6.83%  chg/d 16.8  stop/d 0.50
+  slope-ols W60 g30          hold30         uplift $      323   90.8%S1  d$     -5 (-1.38%)  off 6.83%  chg/d 16.6  stop/d 0.50
+  slope-asym W15 up15 dn5    hold30         uplift $      323   90.8%S1  d$     -5 (-1.44%)  off 6.83%  chg/d 18.2  stop/d 0.50
+  slope-asym W15 up30 dn10   hold30         uplift $      314   88.2%S1  d$    -14 (-4.17%)  off 6.83%  chg/d 20.2  stop/d 0.50
+  slope-asym W15 up30 dn0    hold30         uplift $      317   89.3%S1  d$    -10 (-3.01%)  off 6.83%  chg/d 19.7  stop/d 0.50
+  slope-asym W15 up15 dn0    hold30         uplift $      324   91.2%S1  d$     -3 (-0.98%)  off 6.83%  chg/d 17.9  stop/d 0.50
+  slope-asym W30 up15 dn5    hold30         uplift $      325   91.6%S1  d$     -2 (-0.55%)  off 6.83%  chg/d 17.1  stop/d 0.50
+  slope-asym W30 up30 dn10   hold30         uplift $      322   90.7%S1  d$     -5 (-1.52%)  off 6.83%  chg/d 18.2  stop/d 0.50
+  slope-asym W30 up30 dn0    hold30         uplift $      324   91.2%S1  d$     -3 (-1.01%)  off 6.83%  chg/d 18.0  stop/d 0.50
+  slope-asym W30 up15 dn0    hold30         uplift $      326   91.8%S1  d$     -1 (-0.30%)  off 6.83%  chg/d 17.0  stop/d 0.50
+  ewma hl10                  hold30         uplift $      324   91.2%S1  d$     -3 (-0.96%)  off 6.83%  chg/d 14.6  stop/d 0.50
+  ewma hl15                  hold30         uplift $      323   90.8%S1  d$     -5 (-1.41%)  off 6.83%  chg/d 14.4  stop/d 0.50
+  ewma hl30                  hold30         uplift $      320   90.0%S1  d$     -7 (-2.22%)  off 6.83%  chg/d 14.2  stop/d 0.50
+  quant W15 q60              hold30         uplift $      324   91.2%S1  d$     -3 (-0.99%)  off 6.83%  chg/d 15.0  stop/d 0.50
+  quant W15 q75              hold30         uplift $      324   91.2%S1  d$     -3 (-1.03%)  off 6.83%  chg/d 15.3  stop/d 0.50
+  quant W15 q90              hold30         uplift $      323   90.9%S1  d$     -4 (-1.26%)  off 6.83%  chg/d 15.4  stop/d 0.50
+  quant W15 q100             hold30         uplift $      323   90.8%S1  d$     -5 (-1.39%)  off 6.83%  chg/d 15.5  stop/d 0.50
+  quant W30 q60              hold30         uplift $      321   90.3%S1  d$     -6 (-1.92%)  off 6.83%  chg/d 14.6  stop/d 0.50
+  quant W30 q75              hold30         uplift $      320   90.1%S1  d$     -7 (-2.18%)  off 6.83%  chg/d 14.7  stop/d 0.50
+  quant W30 q90              hold30         uplift $      318   89.6%S1  d$     -9 (-2.74%)  off 6.83%  chg/d 14.9  stop/d 0.50
+  quant W30 q100             hold30         uplift $      317   89.3%S1  d$    -10 (-3.05%)  off 6.83%  chg/d 14.9  stop/d 0.50
+  quant W60 q60              hold30         uplift $      315   88.5%S1  d$    -13 (-3.86%)  off 6.83%  chg/d 13.9  stop/d 0.50
+  quant W60 q75              hold30         uplift $      313   88.2%S1  d$    -14 (-4.20%)  off 6.83%  chg/d 13.8  stop/d 0.50
+  quant W60 q90              hold30         uplift $      309   86.8%S1  d$    -19 (-5.69%)  off 6.83%  chg/d 13.7  stop/d 0.50
+  quant W60 q100             hold30         uplift $      304   85.7%S1  d$    -23 (-6.96%)  off 6.83%  chg/d 12.5  stop/d 0.50
+  bias +$5                   hold30         uplift $      325   91.4%S1  d$     -2 (-0.73%)  off 6.83%  chg/d 17.5  stop/d 0.50
+  bias +$10                  hold30         uplift $      316   88.9%S1  d$    -11 (-3.45%)  off 6.83%  chg/d 18.9  stop/d 0.50
+  bias +$20                  hold30         uplift $      275   77.4%S1  d$    -52 (-15.94%)  off 6.83%  chg/d 20.3  stop/d 0.50
+  bias +$40                  hold30         uplift $       71   20.0%S1  d$   -256 (-78.32%)  off 6.83%  chg/d 19.0  stop/d 0.50
+
+wrote /Users/vitficl/Documents/Bitcoin__The_Grid_Resource/analysis/ch5-backtest/output/trend_study/sweep_results.csv

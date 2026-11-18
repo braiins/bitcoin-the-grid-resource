@@ -1,0 +1,101 @@
+\chapter*{Roadmap of This Book}
+\addcontentsline{toc}{chapter}{Roadmap of This Book}
+\markboth{Roadmap of This Book}{}
+
+This book, \textit{Bitcoin: The Grid Resource}, is written for two audiences
+at once: energy professionals who want to understand what Bitcoin mining
+actually is as a load, and Bitcoin miners who want to understand the power
+market they operate in. Its territory is ERCOT, the Texas grid. If you run a mining site, the book
+answers when to slow your machines and when to pause them, which contracts
+keep that choice worth having, whether reserves and avoiding the summer transmission
+peaks still pay, and what all of it would have earned one full-scale Texas
+site, year by year. If you work in power, it answers the same questions from
+the grid's side of the meter.
+
+One convention of spelling runs through every chapter: Bitcoin with a capital B is the network, its protocol and the industry built on it; bitcoin in lowercase is the currency and its unit.
+
+The book moves in four parts.
+
+\section*{Part I: Two Systems}
+
+\begin{itemize}
+\item \textbf{Chapter~1. Introduction: Bitcoin Mining and Energy.} What mining is, why
+it consumes energy at industrial scale, and why electricity is the dominant
+operating cost. Includes a look inside a modern ASIC miner and a
+range for the network's global consumption, with the reason it cannot be
+measured.
+
+\item \textbf{Chapter~2. How Power Systems Work and Why Balance Matters.}
+How the grid stays balanced in real time: generation, transmission,
+frequency, and what happens when balance is lost, told through the 2021
+Winter Storm Uri emergency in ERCOT and the 2003 Northeast Blackout.
+
+\item \textbf{Chapter~3. ERCOT: The Energy-Only Grid.} Why Texas runs
+an island grid with no capacity market, how day-ahead and real-time markets
+set prices, what scarcity pricing means, and where flexible loads fit in
+the market's design.
+\end{itemize}
+
+\section*{Part II: The Economics of Mining as a Load}
+
+\begin{itemize}
+\item \textbf{Chapter~4. Mining Economics: Hashprice, Efficiency,
+Breakeven.} The unit economics of mining, and the single formula
+that converts a miner's revenue into the language of power markets:
+the breakeven price in dollars per megawatt-hour.
+
+\item \textbf{Chapter~5. The Flexible Load: Curtailment and Power
+Optimization.} What price-adaptive operation earned in the chapter's backtests across all eight ERCOT load zones. When to run, when to overclock,
+when to pause, and why optimization matters most when margins are thin.
+Its answer is a price-response loop, three rules and no forecast, which in ERCOT's West load zone captures 93 to 98
+percent of what perfect foresight would gain; Chapter~9 puts the dollars on it.
+\end{itemize}
+
+\section*{Part III: Monetizing Flexibility in ERCOT}
+
+\begin{itemize}
+\item \textbf{Chapter~6. Buying Power: Contracts, Price Arbitrage, and
+the Strike Price.} How miners actually buy electricity, from spot
+indexes to fixed-price contracts and standardized blocks; and the
+real-time strike price, the backstop that steps a fleet out of price
+spikes, valued against real ERCOT price distributions.
+
+\item \textbf{Chapter~7. Ancillary Services: Getting Paid to Stand By.}
+The products ERCOT buys to keep the grid stable, what they paid from
+the 2021 crisis through today, and why those prices collapsed.
+
+\item \textbf{Chapter~8. 4CP, Demand Response, and the Programs Beyond
+Price.} Transmission-charge avoidance and the 12CP rule proposed to
+replace 4CP, demand-response programs, and what curtailment is paid for
+outside the energy market.
+
+\item \textbf{Chapter~9. The Flexibility Stack.}
+The part's capstone: one full-scale mining site runs everything this
+book has priced (the strike, the power target, reserves, and 4CP
+avoidance) under the contracts of Chapter~6, interactions included. The
+chapter sets the site's annual switches as an operator could have set
+them in advance, and prints the best annual choice in hindsight beside
+it as a ceiling. It then compares that site with two alternatives: the same
+site never using its flexibility, and a mine behind the meter that buys
+cheap power and gives most of its flexibility away. In the chapter's backtest, against the modeled site
+that never used its flexibility, the stack an operator could have
+planned was worth 8.0 to 29.5 percent of that site's margin after
+power and grid charges, year by
+year, and \$123~million over 2021 to 2025. Nearly half of it came in
+one week of Winter Storm Uri.
+\end{itemize}
+
+\section*{Part IV: Outlook}
+
+\begin{itemize}
+\item \textbf{Chapter~10. What Comes Next.} Three sums you can
+check: the flexibility stack as hashprice keeps falling, the halving
+schedule against any price the world economy can bear, and the security
+budget and who pays it when the subsidy is gone, with the grid, the fee
+market and the large holder as the candidates. It closes on the case that mining
+becomes a standard grid resource because Bitcoin's halving schedule makes it one.
+\end{itemize}
+
+The appendix documents the methodology and the companion repository: every
+number this book computed can be regenerated from the published analysis
+code, and every number it did not compute carries a citation.

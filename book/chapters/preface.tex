@@ -1,0 +1,63 @@
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\markboth{Preface}{}
+
+About three years ago the questions from our customers changed.
+
+I am a
+product manager at Braiins, working on Braiins Manager, the software that runs
+mining fleets, and for years their requests had only been about hashrate. Then they
+became about when to switch it off. Our customers wanted their machines to slow down when
+prices spiked, and to know whether they should be selling reserves to the grid
+operator. I knew what a joule per terahash was. I had no
+idea what an ancillary service was, or why the same megawatt-hour could cost
+twenty-one dollars before dawn and nearly four thousand that afternoon. % src: analysis/data/ercot_rtm15_spp_loadzones_2021on.csv.gz (ERCOT MIS 13061, Central prevailing time), LZ\_WEST 15-minute real-time settlement point prices on November 17, 2024: \$21.46 in the 04:30 interval, the lowest before the spike, and \$3,925.09 in the 15:00 interval, the day's high (the day's low, \$13.29, came at 23:00); ercot2026protocols sec. 6.6.1.2 and 6.6.3.2 (a load zone's energy settles at a 15-minute price built from the five-minute LMPs: MIS 13061 publishes the Real-Time Settlement Point Price of 6.6.1.2(1), and a load's own charge in 6.6.3.2(2) uses its energy-weighted form, 6.6.1.2(2); the formula is the one in force since RTC+B, and the 2024 price also carried the ORDC adder that RTC+B removed, Chapter 3). The day's five-minute LMPs (analysis/data/ercot_spp_rtm5_lzwest.csv.gz, NP6-788-CD, stamped in UTC) ran from \$7.00 at 00:10 to \$4,979.08 at 15:10 Central; this line printed those five-minute values as what a megawatt-hour cost until 2026-09-26, and read them as morning and evening until 2026-09-25
+
+Answering those questions meant learning a second industry. I found two professional worlds describing the same physical event in completely different words: A grid operator sees a load responding to a price
+signal. A miner sees a site pausing to protect its margin.
+
+So I went looking for the book that would translate between them. For the
+Bitcoin half of the problem there is \textit{Mastering Bitcoin}, Andreas
+Antonopoulos's book that takes a working engineer and makes the protocol
+legible. For the power-system half there are textbooks: excellent, forbidding,
+and silent on mining. In between, where my actual question lived, I found
+conference slides, vendor decks, and a great many confident numbers with
+nothing behind them. I could not find that book.
+
+Working it out myself took longer than it should have. I read market protocols
+written for traders, pulled the settlement files ERCOT (the Electric Reliability Council of Texas) publishes, and asked operators questions that must have sounded naive. The
+connections came slowly, and usually in the wrong order. This book is the
+write-up of that work, arranged the way I wish somebody had handed it to me.
+
+I only trust something once I can compute it. That is as much a limitation as a
+method, and it shaped every chapter. Rather than repeat an industry figure for
+what flexibility is worth, I pulled the price history and worked it out hour by
+hour, in each ERCOT load zone. Where a number in these pages
+is mine, the script that produced it ships with the book, in a public repository
+at \repourl. Where it belongs to
+somebody else, the citation says whose. If a result bothers you, you do not
+have to argue with me about it. Open the script, change the assumption you
+object to, and run it again.
+
+You should also know where I sit. Braiins sells Bitcoin mining firmware and fleet
+software and runs a \glossaryterm{mining-pool}{mining pool}, a service that combines miners' computing power and shares the proceeds, so I have an obvious interest in mining being
+taken seriously as a grid resource. The measured machine efficiency figures in these
+chapters come from aggregated operating data from miners running Braiins~OS,
+because that is real data I can inspect at scale rather than a manufacturer's rated number. I say so every
+time I use it. My answer to that conflict of interest is to publish the arithmetic and let you check it.
+
+The book has two limits. The first is the territory. I chose Texas because that is
+where flexible mining load has gone furthest, and for a more selfish reason:
+ERCOT publishes enough data that I could check my own work. The mechanisms
+travel further than the numbers do, and the book is built so that other markets
+can be added later on the same foundation. The second limit is me. I am a
+product manager, not a power system engineer and not an economist. Where the
+data carries a claim, I say so. Where I am making a judgment call, I mark it as
+one.
+
+I am finishing these pages in a hospital room, where my daughter was born this
+week and where I am staying with her and her mother.
+
+\vspace{1em}
+\noindent Vit Ficl \\
+September 9, 2026

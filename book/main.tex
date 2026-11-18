@@ -1,0 +1,152 @@
+\documentclass[a5paper,10pt]{book}
+
+% ----------------- Packages ------------------
+\usepackage[
+  paper=a5paper,
+  top=19mm,
+  bottom=18mm,
+  inner=23mm,
+  outer=19mm,
+  headheight=14pt,
+  footskip=9mm
+]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{pdftitle={Bitcoin: The Grid Resource},
+            pdfsubject={Why the Power Grid Pays Bitcoin Miners to Be Flexible},
+            pdfauthor={Vit Ficl}}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage{xcolor}
+% Definition links throughout the book; no return links. Other PDF links keep their styling.
+\definecolor{glossarylink}{HTML}{225577}
+\newcommand{\glossaryterm}[2]{%
+  \begingroup\hypersetup{pdfborder={0 0 0}}%
+  \hyperlink{glossary:#1}{\textcolor{glossarylink}{\textbf{#2}}}\endgroup}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[font=small,labelfont=bf, textfont=it]{caption}
+\usepackage[backend=biber,style=numeric,sortcites=true]{biblatex}
+\addbibresource{references.bib}
+% Long URLs in the bibliography may break after any letter or digit, at a
+% penalty high enough that / . - breaks still win; A5 lines are too short for
+% many of them to fit whole.
+\setcounter{biburlnumpenalty}{9000}
+\setcounter{biburlucpenalty}{8000}
+\setcounter{biburllcpenalty}{7000}
+\appto{\bibsetup}{\emergencystretch=1em}
+\setstretch{1.1}
+
+% Visible marker for missing citations (used while drafting; none may remain at print)
+\newcommand{\citeneeded}{\textsuperscript{[citation needed]}}
+% Visible marker for a copyright-page fact the publisher supplies (none may remain at print)
+\newcommand{\presstbd}[1]{\textbf{[to be supplied: #1]}}
+% The companion repository's tag for this edition, printed on the copyright page.
+\newcommand{\editiontag}{v1.0}
+% The companion repository's address, printed wherever the book sends the reader to it.
+% Printed without the scheme, and broken only after a slash.
+\newcommand{\repourl}{{\def\UrlBreaks{\do\/}\def\UrlBigBreaks{}%
+  \href{https://github.com/braiins/bitcoin-the-grid-resource}{\nolinkurl{github.com/braiins/bitcoin-the-grid-resource}}}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+
+% Header chapter marks: "N. Title" (no "Chapter" word), small type, so long
+% titles don't collide with the page number on A5. Chapters with long titles
+% additionally set a short mark via \chaptermark{...} right after \chapter.
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+
+% Even pages (Left-hand pages)
+\fancyhead[LE]{\thepage}                         % Page number on left
+\fancyhead[RE]{\small\nouppercase{\leftmark}}    % Chapter title on right
+
+% Odd pages (Right-hand pages)
+\fancyhead[LO]{\small\nouppercase{\leftmark}}    % Chapter title on left
+\fancyhead[RO]{\thepage}                         % Page number on right
+
+% Blank verso pages inserted before right-opening chapters carry no header
+% (the emptypage package's behavior, inlined because TinyTeX lacks it).
+\makeatletter
+\renewcommand{\cleardoublepage}{\clearpage\if@twoside\ifodd\c@page\else
+  \hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+% Optional: Add spacing or separator
+% Example: \fancyhead[LO]{\nouppercase{\leftmark}\quad\textbar\quad\thepage}
+
+% Remove header underline
+\renewcommand{\headrulewidth}{0pt}
+
+% ----------------- Listings Setup ------------------
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{gray!10},
+  frame=single,
+  breaklines=true
+}
+
+% ----------------- Title ------------------
+\title{Bitcoin: The Grid Resource\\[0.5em]
+  \large Why the Power Grid Pays\\ \large Bitcoin Miners to Be Flexible}
+\author{Vit Ficl}
+\date{\today}
+
+% ----------------- Document ------------------
+\usepackage{array}
+\usepackage{enumitem}
+\begin{document}
+
+\frontmatter
+
+\maketitle
+\input{chapters/copyright}
+\tableofcontents
+
+\input{chapters/foreword}
+
+\input{chapters/preface}
+
+\input{chapters/book-roadmap}
+
+\mainmatter
+
+\part{Two Systems}
+
+\input{chapters/chapter-1}
+\input{chapters/chapter-2}
+\input{chapters/chapter-3}
+
+\part{The Economics of Mining as a Load}
+
+\input{chapters/chapter-4}
+\input{chapters/chapter-5}
+
+\part{Monetizing Flexibility in ERCOT}
+
+\input{chapters/chapter-6}
+\input{chapters/chapter-7}
+\input{chapters/chapter-8}
+\input{chapters/chapter-9}
+
+\part{Outlook}
+
+\input{chapters/chapter-10}
+
+\backmatter
+
+\input{chapters/glossary}
+
+\input{chapters/appendix-methodology}
+
+\printbibliography
+
+\end{document}
